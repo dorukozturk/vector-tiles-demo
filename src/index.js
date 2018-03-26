@@ -19,12 +19,21 @@ var layer = new VectorTileLayer({
 })
 
 layer.setStyle(function(feature, resolution) {
-    // https://openlayers.org/workshop/en/vectortile/ugly.html
-    return new Style({
-      fill: new Fill({
-          color: randomcolor.randomColor()
-      })
-    });
+    var properties = feature.getProperties();
+
+    if (properties.layer == 'boundary') {
+	return new Style({
+	    stroke: new Stroke({
+		color: randomcolor.randomColor()
+	    })
+	});
+    } else {
+	return new Style({
+	    fill: new Fill({
+		color: randomcolor.randomColor()
+	    })
+	});
+    }
 });
 
 var map = new Map({
