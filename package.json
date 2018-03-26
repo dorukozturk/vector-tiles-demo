@@ -1,0 +1,20 @@
+{
+   "name": "vector-tiles-dna-demo",
+   "version": "1.0.0",
+   "description": "",
+   "private": true,
+   "scripts": {
+      "// TODO: est": "echo \"Error: no test specified\" && exit 1"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "devDependencies": {
+      "ol": "^4.6.5",
+      "webpack": "^4.2.0",
+      "webpack-cli": "^2.0.13"
+   },
+   "dependencies": {
+      "randomcolor": "^0.5.3"
+   }
+}
