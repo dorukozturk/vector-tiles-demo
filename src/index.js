@@ -27,6 +27,20 @@ layer.setStyle(function(feature, resolution) {
 		color: randomcolor.randomColor()
 	    })
 	});
+    }
+    else if (properties.layer == 'place') {
+	return new Style({
+	    text: new Text({
+		text: properties.name,
+		font: 'normal 13px Open Sans',
+		fill: new Fill({
+		    color: 'black'
+		}),
+		stroke: new Stroke({
+		    color: 'white'
+		})
+	    })
+	});
     } else {
 	return new Style({
 	    fill: new Fill({
